@@ -20,6 +20,8 @@ jobs:
     steps:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
+      with:
+        name: dist-without-markdown
     - name: list
       run: |
         cat dist-without-markdown/test.txt
